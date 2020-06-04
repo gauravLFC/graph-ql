@@ -4,10 +4,10 @@ import { hashHistory } from "react-router";
 
 import AuthForm from "./AuthForm";
 
-import mutation from "../mutations/Login";
+import mutation from "../mutations/Signup";
 import query from "../queries/userQuery";
 
-class LoginForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,7 +37,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div>
-        <h3>Login</h3>
+        <h3>SignUp</h3>
         <AuthForm
           onSubmit={this.onSubmit.bind(this)}
           errors={this.state.errors}
@@ -47,4 +47,4 @@ class LoginForm extends React.Component {
   }
 }
 
-export default graphql(query)(graphql(mutation)(LoginForm));
+export default graphql(query)(graphql(mutation)(SignupForm));
